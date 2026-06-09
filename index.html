@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jardines Polinizadores en Traspatio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+:root{
+    --verde:#1B4332;
+    --verde-claro:#52B788;
+    --amarillo:#F4D35E;
+    --blanco:#ffffff;
+    --gris:#f5f5f5;
+}
+
+body{
+    background:white;
+    color:#333;
+}
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    background:rgba(27,67,50,.95);
+    backdrop-filter:blur(10px);
+}
+
+nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 25px;
+}
+
+.logo{
+    color:white;
+    font-size:1.2rem;
+    font-weight:700;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:20px;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--amarillo);
+}
+
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,.4),rgba(0,0,0,.4)),
+    url('https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=1600');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.hero h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.2rem;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:var(--amarillo);
+    color:black;
+    padding:15px 30px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+section{
+    padding:90px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    color:var(--verde);
+    margin-bottom:40px;
+    font-size:2rem;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 5px 20px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card h3{
+    color:var(--verde);
+    margin-bottom:10px;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.info-box{
+    background:var(--gris);
+    padding:25px;
+    border-radius:15px;
+}
+
+.info-box h3{
+    color:var(--verde);
+    margin-bottom:10px;
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.step{
+    background:var(--verde);
+    color:white;
+    padding:25px;
+    border-radius:20px;
+}
+
+.step span{
+    font-size:2rem;
+    font-weight:bold;
+    color:var(--amarillo);
+}
+
+.benefits{
+    background:var(--gris);
+}
+
+footer{
+    background:var(--verde);
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:768px){
+
+nav{
+    flex-direction:column;
+    gap:10px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.hero h1{
+    font-size:2rem;
+}
+
+.hero p{
+    font-size:1rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<div class="logo">🌼 Jardines Polinizadores</div>
+
+<ul>
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#que-es">¿Qué es?</a></li>
+<li><a href="#plantas">Plantas</a></li>
+<li><a href="#polinizadores">Polinizadores</a></li>
+<li><a href="#construccion">Construcción</a></li>
+<li><a href="#mantenimiento">Mantenimiento</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero" id="inicio">
+
+<div class="hero-content">
+
+<h1>Jardines Polinizadores en Traspatio</h1>
+
+<p>
+Descubre cómo diseñar, construir y mantener espacios verdes que atraigan abejas, mariposas y otros polinizadores esenciales para el equilibrio ecológico.
+</p>
+
+<a href="#que-es" class="btn">
+Explorar
+</a>
+
+</div>
+
+</section>
+
+<section id="que-es">
+
+<div class="container">
+
+<h2 class="section-title">
+¿Qué es un Jardín Polinizador?
+</h2>
+
+<div class="info-grid">
+
+<div class="info-box">
+<h3>🌿 Conservación</h3>
+<p>
+Ayudan a proteger especies de polinizadores que son fundamentales para la producción de alimentos y la biodiversidad.
+</p>
+</div>
+
+<div class="info-box">
+<h3>🐝 Atracción Natural</h3>
+<p>
+Utilizan plantas que producen néctar y polen para atraer abejas, mariposas, colibríes y otros insectos benéficos.
+</p>
+</div>
+
+<div class="info-box">
+<h3>🌎 Impacto Positivo</h3>
+<p>
+Contribuyen a mejorar la calidad ambiental y promueven ecosistemas más saludables.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="plantas">
+
+<div class="container">
+
+<h2 class="section-title">
+Catálogo de Plantas
+</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1597848212624-7e38d4f65f9c?w=800">
+<div class="card-content">
+<h3>Lavanda</h3>
+<p>Atrae abejas y mariposas gracias a su abundante néctar.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1470509037663-253afd7f0f51?w=800">
+<div class="card-content">
+<h3>Girasol</h3>
+<p>Fuente importante de alimento para diversos polinizadores.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?w=800">
+<div class="card-content">
+<h3>Salvia</h3>
+<p>Ideal para atraer colibríes y abejas nativas.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="polinizadores">
+
+<div class="container">
+
+<h2 class="section-title">
+Polinizadores Principales
+</h2>
+
+<div class="info-grid">
+
+<div class="info-box">
+<h3>🐝 Abejas</h3>
+<p>Son responsables de la polinización de una gran cantidad de cultivos y plantas silvestres.</p>
+</div>
+
+<div class="info-box">
+<h3>🦋 Mariposas</h3>
+<p>Además de polinizar, son indicadores de ecosistemas saludables.</p>
+</div>
+
+<div class="info-box">
+<h3>🐦 Colibríes</h3>
+<p>Transportan polen entre flores mientras se alimentan de néctar.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="construccion">
+
+<div class="container">
+
+<h2 class="section-title">
+Construcción del Jardín
+</h2>
+
+<div class="steps">
+
+<div class="step">
+<span>1</span>
+<h3>Elegir el lugar</h3>
+<p>Seleccionar una zona con buena iluminación natural.</p>
+</div>
+
+<div class="step">
+<span>2</span>
+<h3>Preparar el suelo</h3>
+<p>Agregar composta y mejorar la calidad del terreno.</p>
+</div>
+
+<div class="step">
+<span>3</span>
+<h3>Seleccionar plantas</h3>
+<p>Escoger especies nativas y ricas en néctar.</p>
+</div>
+
+<div class="step">
+<span>4</span>
+<h3>Instalar riego</h3>
+<p>Garantizar una fuente constante de agua.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="mantenimiento" class="benefits">
+
+<div class="container">
+
+<h2 class="section-title">
+Mantenimiento
+</h2>
+
+<div class="info-grid">
+
+<div class="info-box">
+<h3>💧 Riego</h3>
+<p>Mantener el suelo húmedo sin generar encharcamientos.</p>
+</div>
+
+<div class="info-box">
+<h3>✂️ Poda</h3>
+<p>Retirar hojas y flores secas para estimular el crecimiento.</p>
+</div>
+
+<div class="info-box">
+<h3>🌱 Fertilización</h3>
+<p>Utilizar fertilizantes orgánicos para proteger a los polinizadores.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+Beneficios del Proyecto
+</h2>
+
+<div class="info-grid">
+
+<div class="info-box">
+🌼 Incrementa la biodiversidad local.
+</div>
+
+<div class="info-box">
+🐝 Protege especies polinizadoras.
+</div>
+
+<div class="info-box">
+🌎 Mejora el equilibrio ecológico.
+</div>
+
+<div class="info-box">
+🏡 Embellece los espacios domésticos.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Aplicación Móvil para Jardines Polinizadores en Traspatio</h3>
+
+<p>
+Proyecto académico orientado a informar, guiar y promover la construcción y mantenimiento de jardines polinizadores.
+</p>
+
+</footer>
+
+</body>
+</html>
